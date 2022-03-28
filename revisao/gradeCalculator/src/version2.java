@@ -54,7 +54,6 @@ public class version2 {
 		double finalGrade = whatsFinalGrade(grade1, grade2, grade3);
 		String status = studentSituation(finalGrade);
 				
-		System.out.printf("\n\nMédia: %.1f \t Situação: %s", finalGrade, status);
-		
+		System.out.printf("\n\nMédia: %.1f \t Situação: %s", finalGrade, status);		
 	}
 }
