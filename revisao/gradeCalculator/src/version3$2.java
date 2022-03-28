@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
-public class version3 {
+public class version3$2 {
     
-    static boolean isItValid(double x) {
+    static void menu() {
+		System.out.printf("%s \n%s \n%s \n%s\n", "Você deseja averiguar a situação acdêmica de algum aluno?", "Selecione alguma das opções abaixo:", "\"1\" - Prosseguir com a operação", "\"2\" - Encerrar operação");
+	}
+		
+	static boolean isItValid(double x) {
 		if (x > 10 || x < 0) {
 			return false;
 		} else {
@@ -28,55 +32,53 @@ public class version3 {
 		
 		Scanner read = new Scanner(System.in);
 		
-		int entry;
+		String entry;
 		double grade1, grade2, grade3;
 			
 		System.out.println("Olá!\n");
-        
 		while (true) {
-			System.out.println("Você deseja descobrir a situação de algum aluno? \nDigite \"1\" caso queira continuar, ou \"2\" caso deseje encerrar a operação");
-		
-			entry = read.nextInt();
-		
-			while (entry != 1 && entry != 2) {
-				System.out.printf("Opção inválida! Tente novamente: ");
-				entry = read.nextInt();
-			}
+			
+			menu();			
+			entry = read.next();
 
-			if (entry == 1) {
+			while (!entry.equals("1") && !entry.equals("2")) {
+				System.out.printf("Opção inválida! Tente novamente: ");
+				entry = read.next();
+			}
+			
+			if (entry.equals("1")) {
 				System.out.printf("\nInsira o nome do aluno: ");
 				String name = read.next();
 				
-				System.out.printf("Insira sua primeira nota: ");
+				System.out.printf("Insira a primeira nota do aluno: ");
 				grade1 = read.nextDouble();
-
-				while (isItValid(grade1) == false) {
+				
+                while (isItValid(grade1) == false) {
 					System.out.printf("Nota inválida! Tente novamente: ");
 					grade1 = read.nextDouble();
 				}
 				
-				System.out.printf("Insira sua segunda nota: ");
+				System.out.printf("Insira a segunda nota: ");
 				grade2 = read.nextDouble();
-
-				while (isItValid(grade2) == false) {
+				
+                while (isItValid(grade2) == false) {
 					System.out.printf("Nota inválida! Tente novamente: ");
 					grade2 = read.nextDouble();
 				}
 				
-				System.out.printf("Insira sua terceira nota: ");
+				System.out.printf("Por fim, insira a terceira nota: ");
 				grade3 = read.nextDouble();
-
-				while (isItValid(grade3) == false) {
+				
+                while (isItValid(grade3) == false) {
 					System.out.printf("Nota inválida! Tente novamente: ");
 					grade3 = read.nextDouble();
 				}
 					
-				double finalGrade = whatsFinalGrade(grade1, grade2, grade3);
-				String status = studentSituation(finalGrade);
+				String status = studentSituation(whatsFinalGrade(grade1, grade2, grade3));
 				
-				System.out.printf("\nNome: %s\nMédia: %.1f \nSituação: %s\n\n", name, finalGrade, status);			
+				System.out.printf("\nNome: %s\nMédia: %.1f \nSituação: %s\n\n", name, whatsFinalGrade(grade1, grade2, grade3), status);			
 			} else {
-				System.out.println("\nOPERAÇÃO ENCERRADA");
+				System.out.println("\nOPERAÇÂO ENCERRADA");
 				break;
 			}
 		}
