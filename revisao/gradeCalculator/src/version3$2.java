@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class version3$2 {
     
     static void menu() {
-		System.out.printf("%s \n%s \n%s \n%s\n", "Você deseja averiguar a situação acdêmica de algum aluno?", "Selecione alguma das opções abaixo:", "\"1\" - Prosseguir com a operação", "\"2\" - Encerrar operação");
+		System.out.printf("%s \n%s \n%s \n%s\n", "Você deseja averiguar a situação acadêmica de algum aluno?", "Selecione alguma das opções abaixo:", "\"1\" - Prosseguir com a operação", "\"2\" - Encerrar operação");
 	}
 		
 	static boolean isItValid(double x) {

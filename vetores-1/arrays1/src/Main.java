@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     
-    static void showGrades(double [] xyz) {
+	static void showGrades(double [] xyz) {
 		System.out.println("\nAs notas inseridas são:");
 		for (int i = 0; i < xyz.length; i++) {
 			System.out.printf("%dª nota: \t%.1f\n", i + 1, xyz[i]);
