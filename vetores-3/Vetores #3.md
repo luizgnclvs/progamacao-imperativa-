@@ -1,8 +1,5 @@
 # Vetores #3
 
-### {Exercícios de fixação}
-***
-
 Exercício proposto:
 
 **1.** Faça um programa que leia um vetor com quinze posições para números inteiros. Crie, a seguir, um vetor resultante que contenha todos os números primos do vetor digitado.
