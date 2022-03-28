@@ -14,7 +14,7 @@ public class Question4 {
 
     static int [][] concatArrays(int [] vector1, int [] vector2) {
         int [][] bothArrays = new int [2][10];
-        
+
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 10; j++) {
                 if (i == 0) {
@@ -29,7 +29,7 @@ public class Question4 {
 
     static int [][] evenOrOdd() {
         Random r = new Random();
-        
+
         int [] vectorEven = new int [10];
         int [] vectorOdd = new int [10];
 
@@ -53,7 +53,7 @@ public class Question4 {
     }      
 
     public static void main(String[] args) {
-                                        
+
         int [][] evensAndOdds = evenOrOdd();
 
         int [] evens = new int [10];
