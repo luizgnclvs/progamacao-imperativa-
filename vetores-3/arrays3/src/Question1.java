@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Question1 {
     
-    static int [] buildVector() {
+	static int [] buildVector() {
 		Scanner read = new Scanner (System.in);
 		
 		int [] vector = new int [15];
@@ -14,7 +14,7 @@ public class Question1 {
 		return vector;
 	}
 
-    static void showVector(int [] vector) {
+    	static void showVector(int [] vector) {
 		for (int i = 0; i < vector.length; i++) {
 			if (i == (vector.length - 1)) {
 				System.out.printf("%d", vector[i]);
