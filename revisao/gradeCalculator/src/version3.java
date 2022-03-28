@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Version3 {
     
-    static boolean isItValid(double x) {
+    	static boolean isItValid(double x) {
 		if (x > 10 || x < 0) {
-		return false;
+			return false;
 		} else {
-		return true;
+			return true;
 		}
 	}
 
@@ -16,11 +16,11 @@ public class Version3 {
 
 	static String studentSituation(double x) {
 		if (x >= 7) {
-		return "APROVADO POR MÉDIA";
+			return "APROVADO POR MÉDIA";
 		} else if (x >= 5) {
-		return "APROVADO";
+			return "APROVADO";
 		} else {
-		return "REPROVADO";
+			return "REPROVADO";
 		}
 	}	
 
