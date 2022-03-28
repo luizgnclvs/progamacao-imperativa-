@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Version2 {
     
-    static boolean isItValid(double x) {
+    	static boolean isItValid(double x) {
 		if (x > 10 || x < 0) {
 			return false;
 		} else {
 			return true;
 		}
 	}
-
+	
 	static double whatsFinalGrade(double x, double y, double z) {
 		return (x + y + z)/3;
 	}
@@ -53,7 +53,7 @@ public class Version2 {
 
 		double finalGrade = whatsFinalGrade(grade1, grade2, grade3);
 		String status = studentSituation(finalGrade);
-				
+
 		System.out.printf("\n\nMédia: %.1f \t Situação: %s", finalGrade, status);		
 	}
 }
