@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class LetterA {
 
-    static int [] buildVector() {
+    static int [] buildVector(int x) {
         Scanner read = new Scanner(System.in);
             
-        int [] vector = new int [8];
+        int [] vector = new int [x];
             
         for (int i = 0; i < vector.length; i++) {
             System.out.printf("Insira um valor para seu vetor: ");
@@ -35,7 +35,7 @@ public class LetterA {
 
     public static void main(String[] args) {
         
-        int [] vectorA = buildVector();
+        int [] vectorA = buildVector(8);
 
         int [] vectorB = timesThree(vectorA);
 

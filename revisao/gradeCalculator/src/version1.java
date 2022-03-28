@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class version1 {
+public class Version1 {
     
     public static void main(String[] args) {
         
         Scanner read = new Scanner(System.in);
-		
+			
 		double grade1, grade2, grade3;
 		String status;
 		
@@ -29,5 +29,5 @@ public class version1 {
 		}
 		
 		System.out.printf("\nMédia: %.2f \nSituação: %s", finalGrade, status);
-    }
+	}
 }

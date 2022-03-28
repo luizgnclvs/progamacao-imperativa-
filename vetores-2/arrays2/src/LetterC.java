@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LetterB {
+public class LetterC {
     
     static int [] buildVector(int x) {
         Scanner read = new Scanner(System.in);
@@ -24,24 +24,28 @@ public class LetterB {
         }
     }
 
-    static int [] thisMinusThat(int [] vector1, int [] vector2) {
-        int [] newVector = new int [vector1.length];
+    static int [] concatVectors(int [] vector1, int[] vector2) {
+        int [] newVector = new int [vector1.length + vector2.length];
 
         for (int i = 0; i < newVector.length; i++) {
-            newVector[i] = vector1[i] - vector2[i];
+            if (i < vector1.length) {
+                newVector[i] = vector1[i];
+            } else {
+                newVector[i] = vector2[i - vector1.length];
+            }            
         }
         return newVector;
     }
-    
+
     public static void main(String[] args) {
         
         System.out.println("Insira os valores desejados para \"A\"");
-        int [] vectorA = buildVector(20);
+        int [] vectorA = buildVector(5);
 
         System.out.println("\nInsira os valores desejados para \"B\"");
-        int [] vectorB = buildVector(20);
+        int [] vectorB = buildVector(10);
 
-        int [] vectorC = thisMinusThat(vectorA, vectorB);
+        int [] vectorC = concatVectors(vectorA, vectorB);
 
         System.out.printf("\nOs valores inseridos em \"A\" são: ");
         showVector(vectorA);
