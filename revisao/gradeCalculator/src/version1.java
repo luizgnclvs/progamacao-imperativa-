@@ -29,5 +29,5 @@ public class Version1 {
 		}
 
 		System.out.printf("\nMédia: %.2f \nSituação: %s", finalGrade, status);
-	   	}
+	}
 }
