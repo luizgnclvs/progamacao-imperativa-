@@ -8,3 +8,4 @@ Exercícios propostos pelo professor ao decorrer da disciplina de Programação 
 - Vetores #1
 - Vetores #2
 - Vetores #3
+- Matrizes
