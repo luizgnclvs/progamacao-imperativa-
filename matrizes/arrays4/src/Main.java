@@ -32,26 +32,15 @@ public class Main {
         return dimensions;
     }
 
-    static int menuOps () {
+    static int[][] buildMatrixRead () {
         Scanner read = new Scanner(System.in);
 
-        System.out.printf("%s \n%s \n%s \n%s \n%s", "\nOlá, deseja realizar alguma operação com sua matriz?", "(Insira o número que corresponde ao método desejado)", "1 - Trocar linhas", "2 - Trocar colunas", "3 - Não desejo realizar nenhuma operação\n");
-
-        int method = read.nextInt();
-        while(method != 1 && method != 2 && method != 3) {
-            System.out.printf("\nOpção inválida! Tente novamente: ");
-            method = read.nextInt();
-        }
-        return method;
-    }
-
-    static int[][] buildMatrixRead (int x, int y) {
-        Scanner read = new Scanner(System.in);
+        int[] dimensions = matrixDimensions();
         
-        int[][] matrix = new int [x][y];
+        int[][] matrix = new int [dimensions[0]][dimensions[1]];
 
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
+        for (int i = 0; i < dimensions[0]; i++) {
+            for (int j = 0; j < dimensions[1]; j++) {
                 System.out.printf("Insira um valor: ");
                 matrix[i][j] = read.nextInt();
             }
@@ -59,13 +48,15 @@ public class Main {
         return matrix;
     }
 
-    static int[][] buildMatrixRandom (int x, int y) {
+    static int[][] buildMatrixRandom () {
         Random r = new Random();
 
-        int[][] matrix = new int [x][y];
+        int[] dimensions = matrixDimensions();
 
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
+        int[][] matrix = new int [dimensions[0]][dimensions[1]];
+
+        for (int i = 0; i < dimensions[0]; i++) {
+            for (int j = 0; j < dimensions[1]; j++) {
                 matrix[i][j] = r.nextInt(101);
             }
         }
@@ -80,6 +71,19 @@ public class Main {
             }
             System.out.printf("\n");
         }
+    }
+
+    static int menuOps () {
+        Scanner read = new Scanner(System.in);
+
+        System.out.printf("%s \n%s \n%s \n%s \n%s", "\nOlá, deseja realizar alguma operação com sua matriz?", "(Insira o número que corresponde ao método desejado)", "1 - Trocar linhas", "2 - Trocar colunas", "3 - Não desejo realizar nenhuma operação\n");
+
+        int method = read.nextInt();
+        while(method != 1 && method != 2 && method != 3) {
+            System.out.printf("\nOpção inválida! Tente novamente: ");
+            method = read.nextInt();
+        }
+        return method;
     }
 
     static int[] selectMatrix (int x, int[][] matrix) {
@@ -148,13 +152,9 @@ public class Main {
         int method = menu();
 
         if (method == 1) {
-            int[] dimensions = matrixDimensions();
-            
-            matrix = buildMatrixRead(dimensions[0], dimensions[1]);
+            matrix = buildMatrixRead();
         } else {
-            int[] dimensions = matrixDimensions();
-            
-            matrix = buildMatrixRandom(dimensions[0], dimensions[1]);
+            matrix = buildMatrixRandom();
         }
 
         showMatrix(matrix);
