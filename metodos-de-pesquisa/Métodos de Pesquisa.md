@@ -2,4 +2,4 @@
 
 Exercício proposto:
 
-Aplicar funções de métodos de pesquisa de valores específicos em vetores.
+Aplicar métodos com algoritmos de busca de valores específicos em vetores.
