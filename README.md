@@ -8,4 +8,10 @@ Exercícios propostos pelo professor ao decorrer da disciplina de Programação 
 - Vetores #1
 - Vetores #2
 - Vetores #3
-- Matrizes
+- Matrizes #1
+- Matrizes #2
+- Matrizes #3
+- Métodos de Pesquisa
+- Exercícios com Arrays
+- Teste Avaliativo #1
+- Teste Avaliativo #2
