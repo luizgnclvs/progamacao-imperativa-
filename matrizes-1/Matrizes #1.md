@@ -2,4 +2,4 @@
 
 Exercício proposto: 
 
-Operações simples com matrizes (preencher matriz, exibir matriz, etc.)
+    Operações simples com matrizes (preencher matriz, exibir matriz, etc.)
