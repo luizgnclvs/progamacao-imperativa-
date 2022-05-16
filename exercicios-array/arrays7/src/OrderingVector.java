@@ -15,12 +15,6 @@ public class OrderingVector {
         return vector;
     }
 
-    public static void printVector (int [] vector) {
-        for (int i = 0; i < vector.length; i++) {
-
-        }
-    }
-
     public static int [] descendingOrderVector (int [] vector) {
         int [] orderedVector = new int [vector.length];
         int index = 0;
